@@ -3,7 +3,7 @@ const express = require('express');
 const messageRoutes = require('./routes/messageRoutes');
 const cors = require('cors');
 app.use(express.json())
-app.use(cors({credentials: true, origin: ''}));
+app.use(cors({"origin": "*"}));
 app.use('/api/msg',messageRoutes);
 app.get('/', (req, res) => {
     res
