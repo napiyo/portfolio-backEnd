@@ -3,16 +3,13 @@ const express = require('express');
 const messageRoutes = require('./routes/messageRoutes');
 const cors = require('cors');
 const corsOpts = {
-  origin: '*',
+  origin: 'https://napiyo.github.io',
 
   methods: [
     'GET',
     'POST',
   ],
 
-  allowedHeaders: [
-    'Content-Type',
-  ],
 };
 
 app.use(cors(corsOpts));
